@@ -1,0 +1,14 @@
+{
+  "name": "konka",
+  "version": "1.0.0",
+  "description": "\"这是一个gulp的测试程序\",",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kang"
+  ],
+  "author": "kangjia",
+  "license": "ISC"
+}
