@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/demo02Shou.css"/>
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<style>
+			*{
+				padding: 0;
+				margin:0;
+			}
+			.swiper-container {
+				width: 100%;
+				height:616px;
+			} 
+			.swiper-slide,.swiper-slide img{
+				width: 100%;	
+				height: 100%;	
+			}
+	</style>
+	</head>
+<body>
+<!--header-->
+	<div class="header">
+		<div class="header_h">
+			<a href="#"><img src="img/1.png"/></a>
+		</div>
+		<div class="box">
+			<div class="box1"><a href="#"><h3>首页</h3></a></div>
+			<div class="box1"><a href="#"><h3 class="over">产品</h3></a></div>
+			<div class="box1"><a href="#"><h3 class="over">服务</h3></a></div>
+			<div class="box1"><a href="#"><h3>商城</h3></a></div>
+			<div class="box1"><a href="#"><h3>新闻</h3></a></div>
+		</div>
+		<div  class="logo">
+			<a href="#"><i class="iconfont icon-sousuo"/></i></a>
+			<a href="#"><i class="iconfont icon-ren"/></i></a>
+		</div>
+	</div>
+<!--content-->
+<div class="content">
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/18.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="img/19.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="img/23.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="img/24.jpg" alt=""></div>
+      	<div class="swiper-slide"><img src="img/58.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="img/59.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="img/60.jpg" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+<!--active-->
+<div class="active">
+	<a href="#"><img src="img/20.jpg"/></a>
+	<a href="#"><img src="img/21.jpg"/></a>
+	<a href="#"><img src="img/22.jpg"/></a>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="foot_er">
+		<div class="foot_e">
+			<dl>
+				<dt>推荐产品</dt>
+					<dd><a href="#">S5</a></dd>
+					<dd><a href="#">S3</a></dd>
+					<dd><a href="#">E2</a></dd>
+					<dd><a href="#">R9</a></dd>
+					<dd><a href="#">R8</a></dd>
+					<dd><a href="#">S3</a></dd>
+			</dl>
+			<dl>
+				<dt>服务</dt>
+					<dd><a href="#">售后网点查询</a></dd>
+					<dd><a href="#">手机真伪查询</a></dd>
+					<dd><a href="#">电子保卡查询</a></dd>
+					<dd><a href="#">资料下载</a></dd>
+					<dd><a href="#">免责申明</a></dd>
+			</dl>
+			<dl>
+				<dt>品牌</dt>
+					<dd><a href="#">康佳集团官网</a></dd>
+					<dd><a href="#">关于我们</a></dd>
+					<dd><a href="#">人才招聘</a></dd>
+					<dd><a href="#">新闻中心</a></dd>
+			</dl>
+			<dl>
+				<dt>会员</dt>
+					<dd><a href="#">会员登录</a></dd>
+					<dd><a href="#">会员注册</a></dd>
+			</dl>
+			<dl>
+				<dt>服务热线:400-880-0016</dt>
+				<dd><a href="#">关注康佳:</a></dd>
+				<dd><i class="iconfont icon-weixin"></i></dd>
+				<dd><i class="iconfont icon-xinlangweibo"></i></dd>
+			</dl>
+			<hr />
+		</div>
+	</div>	
+</div>
+<div class="copyRight">
+	Copyright  2015-2016,深圳市康佳移动互联科技有限公司      粤公网安备44030502000123号    粤ICP备05059513号-5              English
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script type="text/javascript">
+	 var mySwiper = new Swiper ('.swiper-container', {
+	    autoplay: 2000,
+	    loop: true,
+	    autoplayDisableOnInteraction :false,
+	    effect : 'cube',
+	    effect : 'coverflow',
+	    paginationClickable: true,
+	    // 如果需要分页器
+	    pagination: '.swiper-pagination',
+	    
+	    // 如果需要前进后退按钮
+	    nextButton: '.swiper-button-next',
+	    prevButton: '.swiper-button-prev',
+  })        
+  
+  
+  $(function(){
+	$(".over").click(function(){
+		$(".box").show(3000);
+	});
+	
+	$(".over").click(function(){
+		$(".box").hide(3000);
+	});
+})
+  
+  /*
+  $(".box").mouseenter(function(){
+	$(this).find(".box1").animate({border-bottom:"97px"},1000)
+})
+$(".box1").mouseleave(function(){
+	$(this).find(".box1").animate({border-bottom:"0px"},1000)
+})
+*/
+</script>
