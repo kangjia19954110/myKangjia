@@ -1,0 +1,16 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
+<script src="../cgrs_data_005/stat.js"></script>
+</head>
+<body>
+<form id="aa" name="aa" action="" method="POST" target="if_adrd"></form>
+<iframe name="if_adrd" id="if_adrd" marginheight="0" marginwidth="1" scrolling="no" width="1" height="0" frameborder="0"></iframe>
+<script>
+var params=get_params(document.referrer);var formid="aa",cl,rl,from,bd=0,domain="",tobj=open_input=null,t=on="",loginfo="",adcode="",is_cbsi=0,pop="";var rs="",rs_arr=[];rs=base64decode(params["adrs"]);pop=params["adpop"];adcode=params["adcode"];loginfo=params["loginfo"];is_cbsi=params["cbsi"];if(undefined!=params["on"]){on=params["on"]}rs_arr=rs.split("{X}");cl=rs_arr[0];fl=rs_arr[1];from=rs_arr[2];bd=rs_arr[3];t=rs_arr[4];if(rs){if(undefined!=statDomain[from]){domain=statDomain[from]}if(undefined!=bd&&0!=bd){if(undefined!=is_cbsi&&0!=is_cbsi){document.write('<iframe src="'+"//stat.cbsi.com.cn/rs/log_num.php?from="+from+"&on="+on+"&barid="+bd+"&loginfo="+loginfo+"&r="+Math.random()+'" marginheight=0 marginwidth=1 frameborder=0 scrolling=no width=1 height=0></iframe>');document.write('<img width=0 height=0 border=0 src="'+"//ca.w8.com.cn/"+(pop?"cgpop":"cgclk")+"?s="+from+"&on="+on+"&id="+bd+"&tmp="+Math.random()+'" />')}else{document.write('<iframe src="'+"//"+domain+"/adrs/log_num.php?from="+from+"&on="+on+"&barid="+bd+"&loginfo="+loginfo+"&r="+Math.random()+'" marginheight=0 marginwidth=1 frameborder=0 scrolling=no width=1 height=0></iframe>');document.write('<img width=0 height=0 border=0 src="'+"//ca.w8.com.cn/"+(pop?"pop":"clk")+"?s="+from+"&on="+on+"&id="+bd+"&tmp="+Math.random()+'" />')}}if(adcode){document.write(stripslashes(base64decode(adcode)))}else{if(undefined!=t&&"tt"==t){open_input=document.createElement("input");open_input.name="ll";open_input.value=base64encode(cl);open_input.type="hidden";document.getElementById(formid).appendChild(open_input);cl="//"+domain+"/cgrd.php"}if(cl){document.getElementById(formid).action=cl;if(pop){document.getElementById(formid).target="_self";var slow_start_num=0;var slow_obj=null;var slow_submit=function(){if(slow_start_num>1){clearTimeout(slow_obj);document.getElementById(formid).submit()}else{slow_start_num++;slow_obj=setTimeout(function(){slow_submit()},1000)}};if(window.attachEvent){window.attachEvent("onload",function(){clearTimeout(slow_obj);document.getElementById(formid).submit()})}else{if(window.addEventListener){window.addEventListener("load",function(){clearTimeout(slow_obj);document.getElementById(formid).submit()},false)}else{window.onload=function(){clearTimeout(slow_obj);document.getElementById(formid).submit()}}}slow_submit()}else{document.getElementById(formid).submit()}}}};
+</script><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" id="Untitled-1" width="0px" height="1px">
+	<param name="movie" value="//pic.zol-img.com.cn/201710/shenz98239aio700_1018.swf">
+	<embed src="a_data/shenz98239aio700_1018.swf" name="mymovie" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="0px" height="1px">
+	</object>
+
+
+</body></html>

@@ -1,0 +1,19 @@
+
+var ftGUID_2770037="3588A27FC7A3F4";
+var ftConfID_2770037="0";
+var ftParams_2770037="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_ifb=1&ft_domain=detail.zol.com.cn&ft_agentEnv=0&ft_referrer=http%3A%2F%2Fdetail.zol.com.cn%2Fpicture_index_1816%2Findex18159582_184_p1167640.shtml&cachebuster=145582.1797562866";
+var ftKeyword_2770037="";
+var ftCustom_2770037="";
+var ftSection_2770037="";
+var ftSegment_2770037="";
+var ftSegmentList_2770037=[];
+var ftRuleMatch_2770037="0";
+var ftTimestamp_2770037="1509170811";
+var ftImp2770037 = {};
+ftImp2770037.privacy = "x";
+ftImp2770037.guidAge = "-1";
+ftImp2770037.impID = "3588263702C78A";
+
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/277/2770037/2014989/js/j-2770037-2014989.js" id="ftscript_m2770037" name="ftscript_m2770037"></scr'+'ipt>');
+                    
