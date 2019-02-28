@@ -1,0 +1,170 @@
+*,div,form,input,select,section,header,footer,h1,h2,h3,h4,h5,h6,dt,dd,dl{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+body,html{
+    font-family: '宋体';
+}
+/*头部开始*/
+.xctopnavbody{
+    width: 100%;
+    height: 38px;
+    background: #f0f0f0;
+    line-height: 38px;
+    border-bottom: 1px solid #dcdcdc;
+}
+ .w1000{
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+}
+.xctopnav_left ul li{
+    color: #000;
+    font-size: 13px;
+}
+.xctopnav_left ul{
+    display: flex;
+}
+.p_top_right{
+    margin-left: 685px;
+    color: #000;
+    font-size: 13px;
+}
+.p_top_right a{
+    color: #000;
+}
+/*头部*/
+.search_y {
+    padding: 0;
+    /*margin: 25px 0 0 0;*/
+    background: #fff;
+}
+.logo2 .searchInfo_y{
+    width: 415px;
+    height: auto;
+    margin: 0px !important;
+}
+.searchInfo_y .searchInput{
+    width: 100%;
+    height: 39px;
+    border: 2px solid #0383cd;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.searchInfo_y .searchInput input{
+    float: left;
+    width: 300px;
+    height: 37px;
+    line-height: 37px;
+    padding: 5px 0;
+    border: 0 none;
+    outline: 0 none;
+    text-indent: 8px;
+    color: #adadad;
+    margin-left: 60px;
+}
+.searchInfo_y .searchInput .btnInput{
+    float: right;
+    width: 55px;
+    height: 39px;
+    text-align: center;
+    line-height: 36px;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0383cd;
+    padding: 0;
+    color: #fff;
+}
+.logo2 .search{
+    margin-left: 52px;
+    position: relative;
+}
+.form-control{
+    display: block;
+    width: 60px;
+    height: 38px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+}
+.search-hot-item{
+    float: left;
+    margin: 10px;
+}
+.search-hot-list .search-hot-item a{
+    /*margin-top: 10px;*/
+    color: #333333;
+    font-size: 12px;
+}
+.header_content_right{
+    width: 300px;
+}
+.header_content_right .advantage-list{
+    display: flex;
+    margin-top: 20px;
+}
+.header_content_right .advantage-list .advantage-item .icon{
+    text-align: center;
+}
+.header_content_right .advantage-list .advantage-item .icon img{
+    width: 50px;
+    height: 50px;
+}
+.header_content_right .advantage-list .advantage-item .content_t .tit{
+    text-align: center;
+    display: block;
+    margin-top: 0;
+    font-size: 14px;
+}
+.header_content_right .advantage-list .advantage-item{
+    margin-left: 25px;
+}
+
+/*导航栏*/
+.xcnavbody{
+    width: 100%;
+    height: 39px;
+}
+.xcnavbody_y{
+    background: #005dad;
+}
+.xcnavbody_y .xcnav{
+    height: 38px;
+}
+ .conBox{
+    width: 1240px;
+    margin: 0 auto;
+}
+.clearfix{
+    position: relative;
+}
+.xcnavbody_y .xcnav>li{
+    float: left;
+    display: inline;
+    position: relative;
+    margin: 0 8px;
+    line-height: 38px;
+}
+.xcnavbody_y .xcnav>li>a{
+    width: 90px;
+    padding: 0 17px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.xcnavbody_y .xcnav>li:hover{
+    background: #093680;
+}

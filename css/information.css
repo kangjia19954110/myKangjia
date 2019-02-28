@@ -1,0 +1,371 @@
+*,div,form,input,select,header,footer,table,tbody,tr,th,td,h1,h2,h3,h4,h5,h6,section,p{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+body,html{
+    font-family: '宋体';
+    background: #f2f2f2;
+}
+input[type=checkbox]{
+    cursor: pointer;
+    font-size: 14px;
+    width: 12px;
+    height: 10px;
+    border: 0;
+    -webkit-appearance: none;
+}
+input[type=checkbox]:after{
+    content:'';
+    background: #0275d8;
+    color: #fff;
+    display: inline-block;
+    visibility: visible;
+    width: 12px;
+    height: 10px;
+}
+input[type=checkbox]:checked:after{
+    content:'√';
+    font-size: 12px;
+}
+input[type=radio]{
+    cursor: pointer;
+     font-size: 14px;
+    width: 12px;
+     height: 10px;
+ }
+input[type=radio]:after{
+    width: 10px;
+    height: 12px;
+    top: 0;
+    content:"";
+    background: #ff0000;
+    color: #fff;
+    display: inline-block;
+    visibility: visible;
+    padding: 0 3px;
+    border-radius: 50%;
+}
+input[type=radio]:checked:before{
+    content:"√";
+    display: block;
+    width: 6px;
+    height: 6px;
+    color: #fff;
+    font-weight: 400;
+    z-index: 1;
+}
+/*container*/
+.makeInfoContent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.makeInfoContent .InfoCont{
+    width: 1240px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.makeInfoContent .InfoCont .help_look{
+    width: 1240px;
+    height: 50px;
+    background: #fff;
+    line-height: 50px;
+
+}
+.makeInfoContent .InfoCont .help_look p{
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #005DAD;
+}
+.makeInfoContent .InfoCont .container_details_item{
+    width: 870px;
+    height:100%;
+    overflow: hidden;
+    margin: 20px 0 0 0;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance{
+    width: 100%;
+    height: 265px;
+    background: #fff;
+    overflow: hidden;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_title p{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_title span{
+    font-size: 12px;
+    color: #666666;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm{
+    margin: 15px 20px;
+
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm table{
+    border: 1px solid #e7e7e7;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr{
+    float: left;
+    /*border-top: 1px solid #e7e7e7;*/
+    height: 48px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr th{
+    width: 100px;
+    height: 45px;
+    border-right: 1px solid #e7e7e7;
+    background: #f2f2f2;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr td{
+    /*width: 176px;*/
+    text-align: center;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .seedAddress p{
+    display: inline-block;
+    margin: 12px 20px;
+    font-size: 12px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .goods_prices a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6602;
+    /*margin-left: 20px;*/
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .goods_prices p{
+    margin-left: 20px;
+    font-size: 12px;
+}
+/*联系人信息*/
+.makeInfoContent .InfoCont .contacts_message{
+    width: 870px;
+    height: 304px;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 20px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .contactsInfo p{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #000;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont p{
+    display: inline-block;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .enterprise{
+    margin-top: 30px;
+    font-size: 12px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont{
+    font-size: 12px;
+    margin-left: 20px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .will_remarks textarea{
+    width: 708px;
+    height: 90px;
+    color: #aaaaaa;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .company_name,.will_remarks,.phone_test{
+    margin: 10px 0;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test a{
+    font-size: 12px;
+    color: #bf1e2e;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test select{
+    vertical-align: middle;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test input{
+    vertical-align: middle;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .sub_button button{
+    width: 160px;
+    height: 38px;
+    background: #bf1e2e;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .sub_button{
+    text-align: center;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice{
+    text-align: center;
+    margin-top: 15px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice p{
+    font-size: 12px;
+    color: #000000;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice input{
+    vertical-align: middle;
+    /*background: #0275d8;*/
+    /*color: #fff;*/
+}
+ /*input[type=checkbox]{*/
+    /*display: inline-block;*/
+    /*!*-webkit-appearance: none;*!*/
+    /*background: #0275d8;*/
+    /*color: #fff;*/
+/*}*/
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice p a{
+    color: #0275d8;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business{
+    width: 870px;
+    height: 89px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #fff;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul{
+    display: flex;
+    justify-content: space-around;
+    /*line-height: 89px;*/
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span{
+    float: right;
+    margin-left: 10px;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li{
+    margin: 28px;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span p{
+    font-size: 14px;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span i{
+    font-size: 12px;
+}
+.makeInfoContent .InfoCont .InfoContLeft{
+    width: 870px;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+}
+/*右侧部分内容*/
+.makeInfoContent .InfoCont .InfoContRight{
+    float: right;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 20px;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li .bar{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li p{
+    display: inline-block;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li{
+    line-height: 40px;
+    margin: 0 20px;
+    font-size: 14px;
+}
+/*侧边栏*/
+.m-aside-tool{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9000;
+    width: 40px;
+    background: #222;
+    color: #fff;
+}
+.m-aside-tool .aside-body{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+}
+.m-aside-tool .aside-bottom{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+}
+.m-aside-tool .tool-list {
+    border-top: 1px solid #333;
+}
+
+
+.m-aside-tool .tool-list .tool-btn {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    -webkit-transition: .2s;
+    transition: .2s;
+    text-decoration: none;
+}
+.m-aside-tool .tool-list a:hover{
+    background: red;
+}
+.m-aside-tool .tool-list .tool-btn .sign {
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    line-height: 21px;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background: #f03a58;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.m-aside-tool .tool-list .tool-btn .name {
+    margin-top: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+.m-aside-tool .tool-list .tool-btn .online {
+    width: 100px;
+    height:40px;
+    background: blue;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    right: 42px;
+    top:45%;
+    color: #FFFFFF;
+    display: none;
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+.m-aside-tool .tool-list .tool-btn .show-content {
+    display: none;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+.m-aside-tool .tool-list .tool-btn .icon img {
+    max-width: 100%;
+    vertical-align: top;
+}
+.m-aside-tool .tool-list .tool-btn .icon1 img {
+    max-width: 100%;
+    vertical-align: top;
+}
+.m-aside-tool .tool-list .tool-btn .icon2 img {
+    max-width: 100%;
+    vertical-align: top;
+}

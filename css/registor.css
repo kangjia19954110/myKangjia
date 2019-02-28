@@ -1,0 +1,97 @@
+*,div,header,footer,nav,section,form,input,h1,h2,h3,h4,h5,h6,dt,dl,dd{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 10px;
+    font-family: '宋体';
+}
+a{text-decoration: none;}
+ul,li{list-style: none;}
+
+.registor_container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.registor_container .regTittle h2{
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.registor_container .header_tab{
+    width: 100%;
+}
+.registor_container .header_tab ul{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 3.2rem;
+    margin:0 5% 0 5%;
+    border: 2px solid #1c8de0;
+    border-radius: 5px;
+}
+.registor_container .header_tab ul li{
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    width: 50%;
+    text-align: center;
+    background: #008ae2;
+}
+/*content*/
+.regContent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+ .form-item{
+    width: 90%;
+    height: 3rem;
+    border: 1px solid #dddddd;
+    margin: 2rem 5%;
+    border-radius: 4px;
+}
+ .form-item input{
+    border: 0;
+    height: 3rem;
+    padding: 0 1rem;
+    width: 80%;
+}
+/*服务条款*/
+.regServe{
+    text-align: center;
+}
+.regServe p{
+    text-align: center;
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #000;
+}
+.regServe a{
+    font-size: 1.4rem;
+    color: #018be3;
+}
+.form-panel{
+    width: 90%;
+    height: 3rem;
+    /*border: 1px solid #ddd;*/
+    /*background: #424242;*/
+    margin: 10% 5%;
+    border-radius: 4px;
+}
+.form-panel .button{
+    width: 100%;
+    height: 3rem;
+    /*background: #ddd;*/
+    font-size: 1.4rem;
+    border-radius: 4px;
+    color: #fff;
+}
+.regNum{
+    width: 2rem;
+    display:inline-block;
+    font-size: 1.2rem;
+    margin-left: 4px;
+}

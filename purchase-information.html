@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>采购信息</title>
+		<link rel="stylesheet" type="text/css" href="css/purchase-information.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	</head>
+	<body>
+		<!--头部开始-->
+<a name="top"></a>
+<div class="xctopnavbody xctopnavbody_y">
+    <div class="xctopnav clear w1000">
+        <div class="xctopnav_left">
+            <ul>
+                <li><a href="#"><img src="img/location.png" alt="" style="vertical-align: middle;"></a></li>
+                <li><a href="#" style="color:#000;margin-left: 5px;">苏州</a></li>
+                <li style="margin-left: 28px;">您好！欢迎光临乐胶网商城。</li>
+            </ul>
+        </div>
+        <div class="p_top_right" id="destoon_member">
+            <a href="">请登录</a> |
+            <a href="">免费注册</a> |
+            <a href="">购物车(<span style="color: #008ae2;">0</span>)</a> |
+            <a href=""><img src="" alt="">400-877-9128</a>
+        </div>
+    </div>
+</div>
+<div class="logo2 pt10 pb10 search_y">
+    <div class="logobody w1000 conBox clearfix searchBox_y">
+        <div class="logo_y">
+            <a href=""><img src="http://www.lejiao1688.com/file/upload/201702/13/13-22-11-38-1.jpg" alt=" 乐胶网- 一站式胶粘供应链电商平台"></a>
+        </div>
+        <img src="http://www.lejiao1688.com/skin/10007/image/yizhanshi.png" style="display: inline; margin-top: 2px;">
+        <form action="" class="navbar-form" id="destoon_search">
+            <input type="hidden" name="moduleid" value="16" id="destoon_moduleid">
+            <input type="hidden" name="spread" value="0" id="destoon_spread">
+            <div class="fr m120 search mt20 searchInfo_y">
+                <div class="searchInput mt10 clearfix">
+                    <input type="text" class="f1 searchText" placeholder="" id="destoon_kw" name="kw" onfocus="">
+                    <button class="btnInput f1 Themebg white" type="submit" value="">搜索</button>
+                    <select style="position: absolute;left: 2px;top: 2px;border: none;appearance:none;-moz-appearance: none;-webkit-appearance: none;
+                        border-right: 1px solid #ccc;border-radius: 0;
+                        /*background: url(http://ourjs.github.io/static/2015/arrow.pne) no-repeat scroll right center transparent;*/
+                        padding-right: 16px;" class="form-control" name="" id="">
+
+                        <option value="">商城</option>
+                        <option value="">地区</option>
+                        <option value="">求购</option>
+                    </select>
+                </div>
+                <ul class="search-hot-list">
+                    <li class="search-hot-item"><a href="">BOPP母卷</a></li>
+                    <li class="search-hot-item"><a href="">成品胶带</a></li>
+                    <li class="search-hot-item"><a href="">特殊胶带</a></li>
+                </ul>
+            </div>
+        </form>
+        <div class="header_content_right">
+            <ul class="advantage-list">
+                <li class="advantage-item">
+                    <div class="icon">
+                        <img src="http://one.lejiao1688.com/skin/10007/image/advantage1.png" alt="">
+                    </div>
+                    <div class="content_t">
+                        <span class="tit">全</span>
+                    </div>
+                </li>
+                <li class="advantage-item">
+                    <div class="icon">
+                        <img src="http://one.lejiao1688.com/skin/10007/image/advantage2.png" alt="">
+                    </div>
+                    <div class="content_t">
+                        <span class="tit">省</span>
+                    </div>
+                </li>
+                <li class="advantage-item">
+                    <div class="icon">
+                        <img src="http://one.lejiao1688.com/skin/10007/image/advantage3.png" alt="">
+                    </div>
+                    <div class="content_t">
+                        <span class="tit">快</span>
+                    </div>
+                </li>
+                <li class="advantage-item">
+                    <div class="icon">
+                        <img src="http://one.lejiao1688.com/skin/10007/image/advantage4.png" alt="">
+                    </div>
+                    <div class="content_t">
+                        <span class="tit">优</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--导航栏-->
+<div class="xcnavbody bgf6 Themebg xcnavbody_y">
+    <ul class="xcnav xcanv1 conBox mt0 Navbox  clearfix" id="menudrop">
+        <li><a href=""><span>首页</span></a></li>
+        <li><a href=""><span>乐胶商城</span></a></li>
+        <li><a href=""><span>实时报价</span></a></li>
+        <li><a href=""><span>采购信息</span></a></li>
+        <li><a href=""><span>团购</span></a></li>
+        <li><a href=""><span>行情资讯</span></a></li>
+        <li><a href=""><span>乐意盈</span></a></li>
+        <li><a href=""><span>走进乐胶网</span></a></li>
+    </ul>
+</div>
+<!--头部公共内容end-->
+<!--采购步骤展示-->
+<div class="step-measure">
+	<div class="measure-image">
+		<a href=""><img src="img/mea_02.png" alt="" /><span>发起求购</span></a>
+		<a href=""><img src="img/mea_03.png" alt="" /><span>卖家实时报价</span></a>
+		<a href=""><img src="img/mea_04.png" alt="" /><span>选择卖家提交意向</span></a>
+		<a href=""><img src="img/mea_05.png" alt="" /><span>卖家接单交易</span></a>
+	</div>
+</div>
+<!--求购信息-->
+<div class="buy_offer">
+	<div class="offer_information">
+		<div class="min_information">
+			<div class="buy_classify">
+				<span></span><p>求购类型</p>
+			</div>
+			<div class="buy_tab">
+				<ul>
+					<li><input type="radio" name="radio"  checked/><label>投标询价</label></li>
+					<li><input type="radio" name="radio"  checked/><label>求购信息</label></li>
+					<li><input type="radio" name="radio"  checked/><label>帮我找货</label></li>
+				</ul>
+			</div>
+			<div class="buy_classify">
+				<span></span><p>完善信息</p>
+			</div>
+			<div class="buy_table">
+				<table cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<th width="300"><img src="" alt="" />行业分类</th>
+							<th width="150"><img src="" alt="" />产品规格</th>
+							<th width="150"><img src="" alt="" />求购数量</th>
+							<th width="190"><img src="" alt="" />交货地址</th>
+							<th width="286"><img src="" alt="" />上传图片</th>
+						</tr>
+						<tr>
+							<td>
+								<select name="">
+									<option value="">成品胶带</option>
+									<option value="">半成品胶带</option>
+									<option value="">包装辅材</option>
+									<option value="">机械设备</option>
+									<option value=""></option>
+								</select>
+								<select name="">
+									<option value="">美纹纸胶带</option>
+									<option value="">电工胶带</option>
+									<option value="">警示胶带</option>
+									<option value="">文具胶带</option>
+									<option value=""></option>
+								</select>
+							</td>
+							<td>
+								<input type="text" placeholder="18mm*30m" />
+							</td>
+							<td>
+								<div class="juan">
+									<input type="text" style="width: 78px;"/>
+									<select style="float: right;">
+										<option value="">卷</option>
+										<option value="">吨</option>
+										<option value="">支</option>
+										<option value="">件</option>
+									</select>
+								</div>
+							</td>
+							<td>
+								<select name="">
+									<option value="">江苏省</option>
+									<option value="">浙江省</option>
+									<option value="">广东省</option>
+									<option value="">山东省</option>
+									<option value="">河南省</option>
+									<option value="">江西省</option>
+								</select>
+								<select name="">
+									<option value="">苏州市</option>
+									<option value="">南京市</option>
+									<option value="">常州市</option>
+									<option value="">徐州市</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</td>
+							<td>
+								<div class="upload">
+									<input type="submit" name="" id="up" value="选择文件" />
+								</div>
+							</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<a href="" class="demend"><img src="img/add_01.png" alt="" /><span>新增求购</span></a>
+			</div>
+			<div class="buy_classify">
+				<span></span><p>其他要求</p>
+			</div>
+			<div class="textarea">
+				<textarea name="" rows="" cols="">平纹美纹纸、耐热温度110~150摄氏度，用于遮蔽保护、建筑装潢等。</textarea>
+			</div>
+			<div class="buy_classify">
+				<span></span><p>发布时长</p>
+			</div>
+			<div class="buy_tab" id="buy_tab">
+				<ul>
+					<li><input type="radio" name="radio" checked/><label>2小时</label></li>
+					<li><input type="radio" name="radio" checked/><label>5小时</label></li>
+					<li><input type="radio" name="radio" checked/><select name="">
+						<option value="">一天</option>
+						<option value="">三天</option>
+						<option value="">五天</option>
+						<option value="">一月</option>
+					</select></li>
+				</ul>
+			</div>
+			<div class="buy_classify">
+				<span></span><p>手机验证</p>
+			</div>
+			<div class="verify">
+				<select name="" style="height: 40px;">
+					<option value="">中国 +86</option>
+					<option value="">中国 +86</option>
+					<option value="">中国 +86</option>
+				</select>
+				<input type="text" name="" id="" value="" maxlength="11" />
+				<input type="text" placeholder="输入动态码" name="" id="" value="" />
+				<input type="submit" value="获取动态码"  style="height: 40px;"/>
+				<a href="">验证成功</a>
+			</div>
+		</div>
+		<div class="launch_buy">
+			<button>发起求购</button>
+		</div>
+	</div>
+</div>
+<!--底部公共区域内容展示start-->
+
+  <!--底部内容1-->
+    <div class="servic">
+        <div class="footerCon">
+            <div class="service clearfix">
+                <div class="pinL f-fl">
+                    <a style="display:block;">
+                        <img src="http://www.lejiao1688.com/skin/10007/img/1.png" style="float:left;margin-right:10px;margin-top:0px;">
+                        <h4>品类齐全</h4>
+                        <p>多快好省，轻松采购</p></a>
+                </div>
+                <div class="baoZ f-fl">
+                    <a style="display:block;">
+                        <img src="http://www.lejiao1688.com/skin/10007/img/2.png" style="float:left;margin-right:10px;margin-top:0px;">
+                        <h4>正品保证</h4>
+                        <p>原厂正品，市场低价</p></a>
+                </div>
+                <div class="peiS f-fl">
+                    <a style="display:block;">
+                        <img src="http://www.lejiao1688.com/skin/10007/img/3.png" style="float:left;margin-right:10px;margin-top:0px;">
+                        <h4>无忧配送</h4>
+                        <p>多仓直发，快速配送</p></a>
+                </div>
+                <div class="youZ f-fl">
+                    <a style="display:block;">
+                        <img src="http://www.lejiao1688.com/skin/10007/img/5.png" style="float:left;margin-right:10px;margin-top:0px;">
+                        <h4>优质服务</h4>
+                        <p>畅选无忧，放心购物</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--底部-->
+    <div class="footer">
+        <div class="footer-item">
+            <dl>
+                <dt> <span></span> </dt>
+                <dd><a href="https://www.lejiao1688.com/">首页</a></dd>
+                <dd>
+                    <a href="https://www.lejiao1688.com/about/index.html">关于我们</a>
+                </dd>
+                <dd>
+                    <a href="https://www.lejiao1688.com/news/381-c381-1.html">购物指南</a>
+                </dd>
+                <dd>
+                    <a href="https://www.lejiao1688.com/member/grade.php">平台规则</a>
+                </dd>
+                <dd>
+
+                    <a href="https://www.lejiao1688.com/news/383-c383-1.html">常见问题</a>
+                </dd>
+                <dd>
+
+                    <a href="https://www.lejiao1688.com/news/show-7872.html">双乾支付</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><span></span></dt>
+                <dd><a href="https://www.lejiao1688.com/about/contact.html">联系我们</a></dd>
+                <dd>
+                    <a href="javascript:;"><img  style="width: 16px;height: 18px;vertical-align:middle;" src="http://www.lejiao1688.com/skin/10007/img/7.png" alt="">&nbsp;苏州市相城区阳澄湖国际科创园1-606</a>
+                </dd>
+                <dd>
+
+                    <a href="javascript:;"><img style="width: 16px;height: 18px;vertical-align:middle;" src="http://www.lejiao1688.com/skin/10007/img/ie.png" alt="">&nbsp;www.lejiao1688.com</a>
+                </dd>
+                <dd>
+                    <a href="javascript:;"><img style="vertical-align:middle;width: 16px;height: 18px;" src="http://www.lejiao1688.com/skin/10007/img/8.png" alt="">&nbsp;400-877-9128</a>
+                </dd>
+            </dl>
+            <dl>
+                <!--<dt></dt>-->
+                <dd><img src="http://images.lejiao1688.com/201704/12/095142931.png" alt=""></dd>
+                <dd style="color: #fff;text-align: center">微信公众号</dd>
+            </dl>
+            <dl>
+                <!--<dt></dt>-->
+                <dd><img src="http://www.lejiao1688.com/skin/10007/image/20180524100420.jpg" alt="" style="width: 130px;height: 130px;"></dd>
+                <dd style="color: #fff;text-align: center">手机商城</dd>
+            </dl>
+        </div>
+    </div>
+    <!--bottom-->
+    <div class="footer-bottom">
+        <div class="footer-content">
+
+            <a href="">关于我们</a> |
+            <a href="">法律声明</a> |
+            <a href="">诚聘英才</a> |
+            <a href="">合作伙伴</a> |
+            <a href="">联系我们</a> |
+            <a href="">常见问题</a>
+        </div>
+        <div class="copyright">
+            <p>COPYRIGHT ©乐胶网 www.lejiao1688.com All Rights Reserved 苏ICP备16038009号-1</p>
+        </div>
+        <div class="bottom-image">
+            <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action"><img src="http://www.lejiao1688.com/skin/blue/images/01.gif"></a>
+            <a href="http://www.miibeian.gov.cn/" target="_blank">
+                <img src="http://www.lejiao1688.com/skin/blue/images/04.gif">
+            </a>
+            <a href="http://www.cyberpolice.cn/wfjb/"><img src="http://www.lejiao1688.com/skin/blue/images/03.gif"></a>
+        </div>
+    </div>
+</div>
+
+<!--底部公共区域内容展示end-->
+<!--侧边栏-->
+<div class="m-aside-tool">
+    <div class="aside-body">
+        <div class="tool-list">
+            <a href="http://one.lejiao1688.com/member/login.php" class="tool-btn">
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA+0lEQVRIS+WTMU5CQRCGv7+wldCpB7DgAMbCWHEAkMKTWHgCC09iIXIAKkJBOIAFBwA7Aq3FmDX7En3ue/MUNpq41SYz838z/86KzEeZ9fknADM7Be6AbrR0DNxKWngWuxZF8RnQLomtgXMP0gTwCFxVdDqUNKiboglgAxxWiGwltf48ILtFYYPyPXLwN+uaenvuxd0t8gS8eC3AzDpAD7gAwv0oCr4Az8AUGEkK9+RJAszsDLgHLr0OY3wC3Eial/O/AMysDzwABw3Fi7RX4FrS08e6FGAJHH9TvEhfSTrxAPZD8fcySZ+aTk2QF7BL96na3/0H+5gm+wRveKpNGcLSzecAAAAASUVORK5CYII="></div>
+                <p class="name">登录</p>
+            </a>
+            <a href="http://one.lejiao1688.com/member/register.php" class="tool-btn">
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABAElEQVRIS+WUvW0CQRCFvxeQYpEBBThwARYBIqIADAGVOHAFDqjEgW0KIEIEiAIIKMCQIUgdjLXojgDf3+7pBBITrbRz79t7+2ZFxaWK9blDgJk9Au9AP7J3BrxJ2iTZ7WVRJL4EGhdie6CTBPEFfALDlGB8SRpd7v0DmJm5JklJewegngI4Snq4eUCYRbEtaUMX2xV8yUUB7gClY5p1ySHPileKKgWY2RMwALqAWzcj4A5YAwtgKsmtz5U7aGb2DEyAXsE/mAOvklanecr6yMxegA+gVlA8bvsFxpK+8wA/QMtTPG7fSmrnAU7PRmi5+bkuIPTkXikqC8mN6c0D/gCkLG0Zy4+IYgAAAABJRU5ErkJggg=="></div>
+                <p class="name">注册</p>
+            </a>
+            <a href="http://shang.qq.com/email/stop/email_stop.html?qq=1710522454&amp;sig=f6b534bac7d573818c26d4779fb7129e9b8afdf8e8348efe&amp;tttt=1;" class="tool-btn zhiCustomBtn">
+                <div class="icon2" onmouseout="hideImg1()" onmouseover="showImg1()" id="icon_img"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB30lEQVRIS62WT2jPcRjHX++FEa2UQjjQUtvFxYH7LgpHrjIx1GYRcZELaWRb+RtrV47bahd3Di4uRJJaS0opkWbLW4++v/Xdd7/v7/P7fe1zfZ7n/Xo+n57v+/mKxLHdCZwEDgA7svQZYBp4JOlDIwk1Cto+BdwB1pXk/QIGJT0s0ykF2D4GjAENmwAMHJc0Xg9St9j2VuA9sCH1hFn8B7Bb0udifhkgnuVck+K1tGFJg0mA7TZgFtjSIiC63y7pT75u2Q1sdwFvWhSvpXdLepsCHAGeVgQclfQsBTgN3KsIOCPpfgpwHrhVEXBB0u0U4DHQWxHwRNKJUoDtjmyCmp3/Yh/xPWyT9L0WWDJFmTU8qNh9rawvbx1FwAtg338CXkrav+wGtncB4Ywp70nxw5s6JX2MxEUx22ENYRErccJhh4uACeDQSqgDk5IOFwGxRDYDr4G9FUGvgD3AF0n/llP+ieaBa8Bv4GZFwCVgDXBV0uoi4ApwA9gJvANWtQhZiJ0AfAIuS7q+BJAXsz0C9LcIGJU0UKwpWzjtwBTQ0yTkOXBQ0lwSYHstcBHoA2J1NnNi2YQDDEmKH4HFU2/hxKjeBTYBcZP4cKKzn8C3rHIjsD6Lh0bEvwJnJU3mAX8BDayQGfq9js0AAAAASUVORK5CYII="></div>
+                <p class="name">咨询</p>
+
+                <div class="online" id="line"><span>在线咨询</span></div>
+            </a>
+            <a href="/shopcart" class="tool-btn">
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABOklEQVRIS8WVMS9EQRSFv6PgN0gsGo1o6BRqlBToJX4AlY5GJdkef4CGStSi0UgUEg0REqVKIhJx5cmQ3fdm9s3se8vU555vzr13MqLHRz325xtgZtYC2pa0VRfYB3gBRiS91gFpa5GZnQMzFY0vJP165AHzwGlFwI2kiR+PwpDN7AqYrABZkHTSCbAEHHYJaGtP5uFL0AfcAmOJkGwTpyVdttZ534GZrQIHiYAjScv5mhCgH7gDhiIh78C4pPsogHt8O8BmJKApad2nDSUYcHMYLQF8uLVekfSWAtgAdoFrYErSZ2SSgiyU4BkYBBYlHXdr7l1T1/9HoJFqLKlw4VCCOWAvFRINSL15J30owSyw7wrXJJ35TMysVBcCPGR/gjN9kjQcAJTq/g1QGt1tW6nubz79Orcm7/UF09B3GX4P+gMAAAAASUVORK5CYII="></div>
+                <p class="name">购<br>物<br>车</p>
+                <div class="sign" id="sidebarCartNum">0</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="aside-bottom">
+        <div class="tool-list">
+            <a href="/buyer/likestore" class="tool-btn">
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABnklEQVRIS7WUMUtcQRSFvwMWNioWahEJaC/YJIX/QLA0sVLSRUnqGNBUKqi1S7JdSKrElIL/IEVsBHuFkBSJRVCbFMKRK/Nk8+LumyfuNDMwd+43d849I7o81OX81ALYfhwXkvQt92J1AR8SYOHeAbaHge8p8UNJv3Mg2RXYXgHWU9JVSRv3BrDdA5wAoynpD2BM0mUVJKsC27PAbinZE0lf7gSw3Q/Emw+lOZ7nUSnZARDPFFqcxizpvAy8qcD2MvAiJe2tulmb/b8J1pC0dd1xRaDtWG8Cr+6YvDi2DbyW5H8ALaDnwA4QwtYZIfhLSc3WQ7eKbHsa+AT0ZRIugDlJ+201KG/YngT2gAcVkJ/AjKTD2+I6tqntqOJpBeCzpLl2MVWAMFRlBZIKA/7HaQuwPQYcZ2owLimcXgswD1z/nmlEl7xN66VSly1I+lgX8A6Ilo3xNUxYCJkaoAFMpf2mpMW6gCNgBAiHvy+M0+KXeN5nQDj2l6SJbIDtgfTPvJH0p5MOtgeBNWBF0lm2DzLFrQzL+q4rs3QI6DrgCnZqexnec2G7AAAAAElFTkSuQmCC"></div>
+            </a>
+            <a href="javascript:void 0;" class="tool-btn show-btn">
+                <div class="icon1" onmouseout="hideImg()" onmouseover="showImg()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiUlEQVRIS9WU2w6AMAhDx/9/NGYmmIU5boJTX2U7NGsLrfiD4vvbBUBE1GAAcM57Zt8H0JajGtqYK7DMTgoshzhQWmYJGC+RFGjq9gHK3kCy6rdtqoUs+v9fVdHfiNs2tSpMgEiSpWQ/DtqqXWnRfYBokrmd09tUBXiq4s41qTZ1AaJVoJ0rr4oD0ZcIKOUH640AAAAASUVORK5CYII="></div>
+                <div class="show-content" id="show">
+                    <img src="http://one.lejiao1688.com/skin/10007/image/095142931.png" alt="">
+                </div>
+            </a>
+            <a href="#" class="tool-btn">
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA4ElEQVRIS+2UMa5BURRF11aYgUYt+ZXGIPyWxEyEmpgMjT8DA2AaOg21xPl58p5w8c4hkZC49claZ+/73hUvPnoxn6/Abfi9KjKzDtCUNHFXzwfCCXL4DKgCI0njiCQkSOAFNyRxBQl8B2yARm5xJaWCG/A2sAYWwE9EcldgZl1gmneebd6WtMygZlaPSm4KyuDFBUQlV4II/BHJhSCBb4HfopZ7n6SX5CR4Bh5JchSYWQVYAS0gtHmaKEnyB/QkHc4T1IA50PdqceoaAENJ+2zO/dEiz0HZzFfgNvj5Ff0DHQ5qGXxFnSQAAAAASUVORK5CYII="></div>
+                <p class="name">顶部</p>
+            </a>
+        </div>
+    </div>
+</div>  
+	</body>
+</html>

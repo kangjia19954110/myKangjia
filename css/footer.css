@@ -1,0 +1,112 @@
+*,div,form,header,footer,section,input,select,table,tbody,th,tr,td,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+body,html{
+    font-family: '宋体';
+}
+
+/*底部公共区域样式展示start*/
+
+.servic{
+	background: #f5f5f5;
+	padding-bottom: 20px;
+	width: 100%;
+	padding-top:20px;
+}
+.footerCon{
+	width: 1240px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.footerCon .servic{
+	padding: 44px 0;
+}
+.clearfix{
+	/*width: 100%;*/
+	position: relative;
+}
+.footerCon .service{
+	display: flex;
+	justify-content: space-between;
+	height: 44px;
+}
+.footerCon .service>div{
+	width: 100%;
+	overflow: hidden;
+}
+.footerCon .service > div h4{
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #000;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.footerCon .service > div p{
+	color: #000;
+}
+/*底部*/
+.footer{
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	background: #000000;
+}
+.footer .footer-item{
+	width: 1240px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.footer .footer-item dl dt{
+	width: 35px;
+	height: 4px;
+	overflow: hidden;
+	background: #fff;
+}
+.footer .footer-item dl{
+	margin: 20px 0;
+}
+.footer .footer-item dl dd a{
+	font-size: 16px;
+	color: #fff;
+	line-height: 30px;
+	font-weight: bolder;
+}
+
+/*bottom*/
+.footer-bottom{
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	overflow: hidden;
+}
+.footer-bottom .footer-content{
+	text-align: center;
+	color: #fff;
+}
+.footer-bottom .footer-content a{
+	color: #fff;
+	
+}
+.footer-bootom .copyright p{
+	width: 1240px;
+	text-align: center;
+	color: #fff;
+	margin: 20px auto;
+}
+.footer-bottom .bottom-image{
+	width: 1240px;
+	margin: 20px auto;
+	text-align: center;
+}
+/*底部公共区域样式展示end*/

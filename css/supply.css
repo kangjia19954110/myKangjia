@@ -1,0 +1,229 @@
+*,div,form,p,header,footer,nav,section,table,tbody,body,html,tr,th,td,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
+ul,li{
+    list-style: none;
+}
+html,body{
+    font-family: '宋体';
+    background: #f2f2f2;
+}
+
+/*供应内容信息展示*/
+.makeInfoContent{
+	width: 100%;    
+	height: 100%;
+	overflow: hidden;
+}
+.makeInfoContent .InfoCont{
+	width: 1240px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.makeInfoContent .InfoCont .help_look{
+	width: 1240px;
+	height: 50px;
+	background: #fff;
+	line-height: 50px;
+}
+.makeInfoContent .InfoCont .help_look p{
+	font-weight: bold;
+	margin-left: 20px;
+	font-size: 20px;
+	color: #FF6602;
+}
+.makeInfoContent .InfoCont .container_details_item{
+	width: 870px;
+	height: 100%;
+	overflow: hidden;
+	margin: 20px 0 0 0;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance{
+	width: 100%;
+	height: 265px;
+	background: #fff;
+	overflow: hidden;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_title p{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_title span{
+	font-size: 12px;
+	color: #666666;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm{
+	margin: 15px 20px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm table{
+	border: 1px solid #e7e7e7;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr{
+	float: left;
+	height: 48px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr td{
+	text-align: center;
+	border: 0;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .sub_tableForm tr th{
+	width: 100px;
+	height: 45px;
+	border-right: 1px solid #e7e7e7;
+	background: #f2f2f2;
+	border: 0;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .seedAddress p{
+	display: inline-block;
+	margin: 12px 20px;
+	font-size: 12px;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .goods_prices a{
+	font-size: 20px;
+	font-weight: bold;
+	color: #FF6602;
+}
+.makeInfoContent .InfoCont .container_details_item .container_info_main .container_substance .goods_prices p{
+	margin-left:20px;
+	font-size: 12px;
+}
+/*联系人信息*/
+.makeInfoContent .InfoCont .contacts_message{
+	width: 870px;
+	height: 304px;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 20px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .contactsInfo p{
+	display: inline-block;
+	margin-top:30px;
+	/*margin-left: 20px;*/
+	font-size: 12px;
+	color:#000;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont p{
+	display: inline-block;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont{
+	font-size: 12px;
+	margin-left: 20px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .enterprise{
+	/*margin-top: 30px;*/
+	font-size: 12px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .will_remarks textarea{
+    width: 708px;
+    height: 90px;
+    color: #aaaaaa;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .company_name,.will_remarks,.phone_test,.enterprise{
+    margin: 25px 0;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test a{
+	font-size: 12px;
+	color: #BF1E2E;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test select{
+	vertical-align: middle;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .phone_test input{
+	vertical-align: middle;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .sub_button button{
+	width: 160px;
+	height: 38px;
+	background: #BF1E2E;
+	border: 0;
+	color: #fff;
+	border-radius: 4px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .sub_button{
+	text-align: center;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice{
+	text-align: center;
+	margin-top:15px;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice p{
+	font-size: 12px;
+	color: #FF6602;
+}
+.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice input{
+	vertical-align: middle;
+}
+/*.makeInfoContent .InfoCont .contacts_message .contacts_cont .notice p a{
+	color: #FF6602;
+}*/
+.makeInfoContent .InfoCont .company_name input{
+	border-radius: 4px;
+	width: 240px;
+}
+/*供应结束*/
+.makeInfoContent .InfoCont .transaction-closure-trade-business{
+	width: 870px;
+	height: 89px;
+	overflow: hidden;
+	margin-top: 20px;
+	background: #fff;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul{
+	display: flex;
+	justify-content: space-around;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span{
+	float: right;
+	margin-left: 10px;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li{
+	margin: 28px;
+}
+
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span p{
+	font-size: 14px;
+}
+.makeInfoContent .InfoCont .transaction-closure-trade-business .transaction-closure-trade-business-box ul li a span i{
+	font-size: 12px;
+}
+
+.makeInfoContent .InfoCont .InfoContLeft{
+	width: 870px;
+	height: 100%;
+	overflow: hidden;
+	float: left;
+}
+/*右侧部分内容*/
+.makeInfoContent .InfoCont .InfoContRight{
+	float: right;
+	width: 300px;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 20px;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li .bar{
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li p{
+	display: inline-block;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li{
+	line-height: 40px;
+	margin: 0 20px;
+	font-size: 14px;
+}
+.makeInfoContent .InfoCont .InfoContRight .right_dealer .deal ul li span img{
+	vertical-align: middle;
+}

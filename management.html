@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>供求管理</title>
+    <link rel="stylesheet" type="text/css" href="css/management.css">
+</head>
+<body >
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!--<script type="text/javascript">-->
+    <!--$(document).ready(function(){-->
+        <!--$("#menu_0").mousemove(function(){-->
+            <!--$(".menu_down").css("display","block");-->
+        <!--});-->
+        <!--$("#menu_0").mouseleave(function(){-->
+            <!--$(".menu_down").css("display","none" );-->
+        <!--});-->
+    <!--})-->
+<!--</script>-->
+<div class="head shadow" id="head">
+    <div class="head_m">
+        <div class="head_logo">
+            <a href="https://www.lejiao1688.com/member/">管理控制台</a>
+        </div>
+        <div class="head_main">
+            <ul>
+                <li class="menu_1" id="menu_0" onclick="c(0)">会员服务
+                    <div class="menu_down" style="display:none;">
+                        <a href="message.php"><i></i>站内信件</a>
+                        <a href="">站内交谈</a>
+                        <a href="">我的商友</a>
+                        <a href="">商机收藏</a>
+                        <a href="">贸易提醒</a>
+                        <a href="">手机短信</a>
+                        <a href="">邮件订阅</a>
+                        <a href="">排名推广</a>
+                        <a href="">广告预定</a>
+                        <a href="">一键登录</a>
+                        <a href="">微信关注</a>
+                        <a href="">修改资料</a>
+                        <a href="">客服中心</a>
+                    </div>
+                </li>
+                <li class="menu_2" id="menu_1" onclick="c(1);">信息管理<i class="glicon glicon-unfold"></i>
+                    <div class="menu_down" style="display:none;">
+                        <a href="my.php?mid=16"><i class="glicon glicon-mall"></i>商城管理</a>
+                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>供求交易管理</a>
+                        <a href="my.php?mid=7"><i class="glicon glicon-quote"></i>行情动态管理</a>
+                        <a href="my.php?mid=21"><i class="glicon glicon-article"></i>资讯头条管理</a>
+                        <a href="my.php?mid=17"><i class="glicon glicon-group"></i>团购管理</a>
+                        <a href="my.php?mid=50"><i class="glicon glicon-info"></i>招商管理</a>
+                        <a href="my.php?mid=12"><i class="glicon glicon-photo"></i>图库管理</a>
+                        <a href="my.php?mid=18" class=""><i class="glicon glicon-club"></i>商圈管理</a>
+                    </div>
+                </li>
+                <li class="menu_2" id="menu_2" onclick="c(2);">交易管理<i class="glicon glicon-unfold"></i>
+                    <div class="menu_down" style="display:none;">
+                        <a href="trade.php"><i class="glicon glicon-myedit"></i>我的订单</a>
+                        <a href="group.php"><i class="glicon glicon-group"></i>团购订单</a>
+                        <a href="record.php"><i class="glicon glicon-liushui"></i>资金流水</a>
+                        <a href="charge.php?action=record"><i class="glicon glicon-myedit"></i>充值记录</a>
+                        <a href="deposit.php"><i class="glicon glicon-zijin"></i>&nbsp;保&nbsp;证&nbsp;金</a>
+                        <a href="cash.php?action=record"><i class="glicon glicon-zijin"></i>资金提现</a>
+                        <a href="credit.php"><i class="glicon glicon-gift"></i>积分管理</a>
+                        <a href="address.php"><i class="glicon glicon-address"></i>收货地址</a>
+                        <!--<a href="xinshebao.php"><i class="glicon glicon-zijin"></i>乐享贷</a>
+                        <a href="lanjinling.php"><i class="glicon glicon-zijin"></i>金钱包</a>
+                        <a href="edianbao.php"><i class="glicon glicon-zijin"></i>E店宝</a>-->
+                    </div></li>
+                <li class="menu_2" id="menu_3" onclick="c(3);">商铺管理<i class="glicon glicon-unfold"></i>
+                    <div class="menu_down" style="display:none;">
+                        <a href="home.php"><i class="glicon glicon-mall"></i>商铺设置</a>
+                        <a href="style.php"><i class="glicon glicon-skin"></i>模板设置</a>
+                        <a href="news.php"><i class="glicon glicon-news"></i>公司新闻</a>
+                        <a href="page.php"><i class="glicon glicon-baby"></i>公司单页</a>
+                        <a href="honor.php"><i class="glicon glicon-medal"></i>荣誉资质</a>
+                        <a href="link.php"><i class="glicon glicon-link"></i>友情链接</a>
+                    </div>
+                </li>
+                <li class="menu_2"><a href="https://www.lejiao1688.com/" target="_blank">网站首页</a></li>
+                <li class="menu_2">
+                    <a href="http://konkakj.lejiao1688.com/" target="_blank" title="konkakj">konkakj&nbsp;(管理员)<i class="glicon glicon-unfold"></i></a>
+                    <div class="menu_down menu_down_my" style="display:none;">
+                        <a href="profile.php"><p><i class="glicon glicon-myedit gl-fz-24"></i></p><p>基本资料</p></a>
+                        <a href="validate.php?action=truename"><p><i class="glicon glicon-shiming"></i></p><p></p><p>实名认证</p></a>
+                        <a href="edit.php"><p><i class="glicon glicon-setting"></i></p><p></p><p>修改资料</p></a>
+                        <a href="credit.php"><p><i class="glicon glicon-gift"></i></p><p></p><p>会员积分</p></a>
+                        <a href="record.php"><p><i class="glicon glicon-xunjia"></i></p><p></p><p>会员资金</p></a>
+                        <a href="grade.php"><p><i class="glicon glicon-vip gl-fz-26"></i></p><p></p><p>升级VIP</p></a>
+                        <a href="logout.php?forward="><p><i class="glicon glicon-logout"></i></p><p></p><p>退出后台</p></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="head_s" id="destoon_space">&nbsp;</div>
+<div class="header-fix"></div>
+<!--管理员-->
+<div class="position">
+    <span class="pos-avatar">
+        <a href="avatar.php">
+            <img src="https://www.lejiao1688.com/api/avatar/show.php?username=konkakj&amp;size=small" width="40" height="40" id="myavatar">
+        </a>
+    </span>
+    <span>
+        欢迎，
+        <a href="https://www.lejiao1688.com/member/line.php"></a>
+    </span>
+    <a href="">
+        <span></span>
+    </a>
+    <a href="record.php">资金：0.00</a>
+    <span class="f_gray"></span>
+    <span>
+        <a href="credit.php">积分：169</a>
+    </span>
+</div>
+<!--会员服务content-->
+<div class="main_tb">
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td valign="top" class="side" id="side">
+                    <div id="sub_0">
+                        <div class="side_header" id="h_0">
+                            <div>信息管理</div>
+                        </div>
+                        <div class="side_body" id="b_0">
+                            <ul>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="message">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">商城管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="chats">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">供求交易管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="looks">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">找货管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="market">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">行情动态管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="headlines">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">资讯头条管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="group">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">团购管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="business">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">招商管理管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="manageImage">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">图库管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="manage">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">商圈管理</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--container-->
+                    <td valign="top" class="main" id="main">
+                            <div class="menu">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td class="tab" id="add"><a href=""><span>添加供应信息</span></a></td>
+                                    <td class="tab" id="inbox"><a href=""><span>添加求购信息</span></a></td>
+                                    <td class="tab" id="outbox"><a href=""><span>已发布（35）</span></a></td>
+                                    <td class="tab" id="draft"><a href=""><span>审核中（0）</span></a></td>
+                                    <td class="tab" id="recycle"><a href=""><span>未通过（0）</span></a></td>
+                                    <td class="tab" id="export"><a href=""><span>已过期（0）</span></a></td>
+                                    <td class="tab" id="empty"><a href=""><span>已下架（0）</span></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                <div class="tt">
+                    <form action="">
+                        <select name="typeid" id="select_k1">
+                            <option value="0">成品胶带</option>
+                            <option value="1">包装辅材</option>
+                            <option value="2">机械设备</option>
+                        </select>
+                        <select name="style" id=select_k2"">
+                            <option value="0">供应</option>
+                            <option value="1">求购</option>
+
+                        </select>
+                        <input type="text" name="kw" value="" size="50" class="key_k">
+                        <input type="submit" value="搜索" class="btn">
+                    </form>
+                </div>
+                <form action="post">
+                    <div class="ls">
+                        <table cellspacing="0" cellpadding="0" class="tb">
+                            <tbody>
+                                <tr  style="height: 40px;background: #f2f2f2;">
+                                    <th width="20">
+                                        <input type="checkbox" onclick="checkall(this.form);">
+                                    </th>
+                                    <th width="63">类型</th>
+                                    <th width="141">品名</th>
+                                    <th width="106">行业</th>
+                                    <th width="153">更新时间</th>
+                                    <th width="88">浏览次数</th>
+                                    <th width="109">信息</th>
+                                    <th width="270">管理</th>
+                                </tr>
+                            <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                <td>
+                                    <input type="checkbox" name="" value="">
+                                </td>
+                                <td>求购</td>
+                                <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                <td>成品胶带</td>
+                                <td><a href="" class="k_date">2019-02-19</a></td>
+                                <td><a href="" class="k_date">5465</a></td>
+                                <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                <!--<td>刷新</td>-->
+                                <!--<td>修改</td>-->
+                                <!--<td>删除</td>-->
+                            </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr><tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr><tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr><tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr><tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                                <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
+                                    <td>
+                                        <input type="checkbox" name="" value="">
+                                    </td>
+                                    <td>求购</td>
+                                    <td><a href="" class="k_t">美纹纸胶带</a></td>
+                                    <td>成品胶带</td>
+                                    <td><a href="" class="k_date">2019-02-19</a></td>
+                                    <td><a href="" class="k_date">5465</a></td>
+                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
+                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>刷新</td>-->
+                                    <!--<td>修改</td>-->
+                                    <!--<td>删除</td>-->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btns">
+                            <span class="f_r">
+                                <input type="submit" value="删除选中" class="deleteBtn" onclick="">
+                            </span>
+                            <input type="submit" value="刷新选中" class="renovate" onclick="">
+                            <p class="curcle_k" style="width: 25px;height: 25px;border-radius: 50%;vertical-align:middle;border: 1px solid #000;text-align: center;line-height: 25px;float: right;margin-right: 620px;margin-top: 4.5px;">?</p>
+                            <span class="black_k" style="display: none;">刷新选中可以把发布的供应展示在首页<br/>或把发布求购的时长刷新时间</span>
+                        </div>
+                        <div class="btns-btt">
+                            <span>总共可发 <a href="" style="color:red;">50</a>条&nbsp;当前已发 <a href="">35</a>条&nbsp;还可发 <a href="">15</a>条</span>
+
+                        </div>
+                    </div>
+                </form>
+                <!--翻页-->
+                <div id="page"></div>
+                </td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--footer-->
+<div class="footer">
+    CORYRIGHT @乐胶网www.lejiao1688.com All Rights Reserved <a href="http://www.miitbeian.gov.cn">苏ICP备16038009号-1</a>版权所有
+</div>
+<!--右侧导航栏-->
+<div class="r-tool" id="r-tool" style="height: 100%;">
+    <ul style="position: fixed;top: 20%;right: 0px;width: 50px;">
+        <li><a href="">
+            <span>个人中心</span>
+            <em class="tool_icon_1">
+                <img src="https://www.lejiao1688.com/api/avatar/show.php?username=konkakj&amp;size=large">
+            </em>
+        </a></li>
+        <li><a href="">
+            <span>我的积分</span>
+            <em class="tool_icon_2">
+                <img src="https://www.lejiao1688.com/member/image/tool_icon_2.png" alt="">
+            </em>
+        </a></li>
+        <li><a href="">
+            <span>我的</span>
+            <em class="tool_icon_3">
+                <img src="https://www.lejiao1688.com/member/image/tool_icon_3.png" alt="">
+            </em>
+        </a></li>
+        <li><a href="">
+            <span>我的供求交易</span>
+            <em class="tool_icon_4">
+                <img src="https://www.lejiao1688.com/member/image/tool_icon_4.png" alt="">
+            </em>
+        </a>
+        </li>
+    </ul>
+    <ul style="position: fixed;bottom: 10%;right: 0px; width: 50px;">
+        <li><a href="">
+            <span>通知公告</span>
+            <em class="tool_icon_6">
+                <img src="https://www.lejiao1688.com/member/image/tool_icon_6.png" alt="">
+            </em>
+        </a></li>
+        <li>
+            <a href="">
+                <span>网站留言</span>
+                <em class="tool_icon_9">
+                    <img src="https://www.lejiao1688.com/member/image/tool_icon_8.png" alt="">
+                </em>
+            </a>
+        </li>
+        <li><a href="">
+            <span>
+                帮助中心
+            </span>
+            <em class="tool_icon_7">
+
+                <img src="https://www.lejiao1688.com/member/image/tool_icon_7.png" alt="">
+            </em>
+        </a></li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.page.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#page").Page({
+            totalPages:3,
+            liNums:3,
+            activeClass:'activeP',
+            callBack:function(page){
+
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
+    $(function(){
+        //设置鼠标滑过以class为head_main的li时
+        $(".head_main li").hover(function(){
+
+            /*
+            * 设置一个为m的参数，来查找以class为menu_down的标签
+            * */
+            m = $(this).find(".menu_down");
+
+            if(m.is(":animated") == false){
+
+                m.slideDown(250);//隐藏内容
+            }
+        },function(){
+
+            //显示内容
+            m.slideUp(250);
+        });
+
+        //
+        $(".home-section-notice-v2 .nav-tabs li").click(function(){
+
+            $(this).addClass('active').siblings().removeClass('active');
+
+            $(".home-section-notice-v2 .tab-pane").eq($(this).index()).addClass('active').siblings().removeClass('active');
+        })
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.curcle_k').mousemove(function(){
+            $(".black_k").css("display","inline-block");
+        });
+        $('.curcle_k').mouseleave(function(){
+            $(".black_k").css("display","none");
+        });
+    })
+</script>

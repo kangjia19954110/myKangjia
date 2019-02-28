@@ -1,0 +1,116 @@
+*,div,form,header,footer,section,input,h1,h2,h3,h4,h5,h6,dl,dd,dt{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body,html{
+    font-family: '宋体';
+    font-size: 10px;
+    background: #EEEEEE;
+}
+
+/*搜索找货*/
+.search-look-for-goods{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.search-look-for-goods .search-container .search-content-box .search-container-title{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 0;
+    line-height: 2rem;
+}
+.search-content-box .search-container-title input{
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    width: 70%;
+    background: #f2f2f2;
+    color: #999999;
+    text-indent: 2em;
+    border:0;
+}
+.search-content-box .search-container-top ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.search-content-box .search-container-top ul li{
+    width: 25%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.search-content-box .search-container-top ul li a{
+    font-size: 24px;
+    color: #333333;
+    font-weight: bold;
+}
+.search-content-box .search-container-top ul li:hover a{
+    color: #008cdf;
+}
+.search-content-box{
+    border-bottom:1px solid #dddddd;
+    /*height: 5.8rem;*/
+    background: #fff;
+}
+.search-container-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #EEEEEE;
+}
+.search-container-content .container-search-history, .search-container-content .search-recommend{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.search-container-content .container-search-history p{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 5%;
+}
+.search-container-content .container-search-history ul li a{
+    float: left;
+    /*width: 30%;*/
+    height: 3rem;
+    background: #fff;
+    margin: 3%;
+    font-size: 21px;
+    color: #000;
+    line-height: 3rem;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    border: 1px solid #dddddd;
+    font-weight: bold;
+}
+/*.search-container-content .container-search-history ul li a{*/
+  /**/
+/*}*/
+.search-container-content .search-recommend p{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 5%;
+}
+.search-container-content .search-recommend ul li a{
+    float: left;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 21px;
+    background: #fff;
+    border-radius: 45px;
+    margin: 3%;
+    color: #333333;
+    border:1px solid #dddddd;
+    font-weight: bold;
+}

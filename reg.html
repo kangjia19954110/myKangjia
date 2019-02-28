@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/registor.css"/>
+</head>
+<body>
+<div class="registor_container">
+    <div class="regTittle">
+        <h2>注册</h2>
+    </div>
+    <div class="header_tab">
+        <ul>
+            <li class="reg_company">企业注册</li>
+            <li class="reg_personal">个人注册</li>
+        </ul>
+    </div>
+    <form action="#" name="form">
+        <div class="regContent1" id="companyContent">
+            <div class="form-item">
+                <span class="regNum">+86</span>
+                <input type="text" name="text" required="required" placeholder="请输入手机号码" autocomplete="off">
+            </div>
+            <div class="form-item">
+                <input type="text" name="text" required="required" placeholder="短信验证码" autocomplete="off" style="width: 58%">
+                <input type="text" required="required" autocomplete="off" value="获取验证码" style="width: 22%;height:2.5rem;margin:0.25rem 0.2rem;float: right;
+                text-align: center;background: #008ae2;border-radius: 20px;color: #fff;">
+            </div>
+            <div class="form-item">
+                <input type="text" name="text" required="required" placeholder="请输入密码" autocomplete="off">
+            </div>
+            <div class="form-item">
+                <input type="text" name="text" required="required" placeholder="请输入公司名称" autocomplete="off">
+            </div>
+            <div class="regServe">
+                <p>注册即代表你同意</p><a href="">《服务条款》</a>
+            </div>
+            <div class="form-panel">
+                <input type="submit" class="button"  title="Sign In" value="下一步">
+            </div>
+        </div>
+
+        <div class="regContent2" id="personalContent" style="display: none;">
+            <div class="form-item">
+                <span class="regNum">+86</span>
+                <input type="text" name="text" required="required" placeholder="请输入手机号码" autocomplete="off">
+            </div>
+            <div class="form-item">
+                <input type="text" name="text" required="required" placeholder="短信验证码" autocomplete="off" style="width: 58%">
+                <input type="text" required="required" autocomplete="off" value="获取验证码" style="width: 22%;height:2.5rem;margin:0.25rem 0.2rem;float: right;
+                text-align: center;background: #008ae2;border-radius: 20px;color: #fff;">
+            </div>
+            <div class="form-item">
+                <input type="text" name="text" required="required" placeholder="请输入密码" autocomplete="off">
+            </div>
+            <!--<div class="form-item">-->
+                <!--<input type="text" name="text" required="required" placeholder="请输入公司名称" autocomplete="off">-->
+            <!--</div>-->
+            <div class="regServe">
+                <p>注册即代表你同意</p><a href="">《服务条款》</a>
+            </div>
+            <div class="form-panel">
+                <input type="submit" class="button"  title="Sign In" value="下一步">
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
+<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>-->
+<script type="text/javascript">
+    // $(document).ready(function(){
+    //     $(".reg_company").click(function(){
+    //         $(".reg_company").css("background","#008ae2");
+    //         $(".reg_personal").css("background","#fff");
+    //     });
+    //     $(".reg_personal").click(function(){
+    //         $(".reg_personal").css("background","#008ae2");
+    //         $(".reg_company").css("background","#fff");
+    //     })
+    // })
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $(".reg_company").click(function(){
+            $("#companyContent").css("display","block");
+            $("#personalContent").css("display","none");
+        });
+        $(".reg_personal").click(function(){
+            $("#companyContent").css("display","none");
+            $("#personalContent").css("display","block");
+
+        });
+    });
+
+    $(function(){
+        $(document).ready(function(){
+            $(".reg_personal").click(function(){
+                $(".reg_company").css("background","#008ae2");
+                $(".reg_personal").css("background","#fff");
+            });
+            $(".reg_personal").click(function(){
+                $(".reg_personal").css("background","#008ae2");
+                $(".reg_company").css("background","#fff");
+            })
+        })
+    })
+</script>

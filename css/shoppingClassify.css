@@ -1,0 +1,104 @@
+*,header,footer,nav,section,form,div,h1,h2,h3,h4,h5,h6,dl,dd,dt{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 10px;
+    font-family: "宋体";
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+}
+.shopping-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+.shopping-container .shopping-header ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 3rem;
+    background: #1c8de0;
+}
+.shopping-header ul li{
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 3rem;
+}
+.shopping-header ul li a{
+    color: #fff;
+    font-weight: bolder;
+}
+/*content*/
+.shopping-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #EEEEEE;
+}
+.shopping-content .shopping-input{
+    width: 90%;
+    height: 2rem;
+    border: 1px solid #424242;
+    margin: 2% 5%;
+    border-radius: 4px;
+}
+.shopping-content .shopping-input input{
+    width: 95%;
+    height: 2rem;
+    border: 0;
+    border-radius: 4px;
+    padding-left: 1rem;
+}
+.shopping-classify{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.shopping-classify .shopping-classify-left{
+    width: 30%;
+    height:100%;
+    background: #eeeeee;
+}
+.shopping-classify .shopping-classify-right{
+    width: 70%;
+    height: auto;
+    background: #fff;
+    z-index: 9999;
+    /*border: 1px solid red;*/
+}
+.shopping-classify-left ul li{
+    display: block;
+    height: 4.6rem;
+    line-height: 4.6rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.shopping-classify-left ul li span{
+    width: 0.25rem;
+    height: 4.6rem;
+    background: #1c8de0;
+}
+.shopping-classify-left ul li:hover{
+    background: #fff;
+}
+.shopping-classify-left ul li a{
+    font-size: 1.4rem;
+    color: #000000;
+}
+.shopping-classify-right .shopping-carts ul li{
+    height: 4.6rem;
+    text-align: center;
+    line-height: 4.6rem;
+}
+.shopping-classify-right .shopping-carts ul li a{
+    font-size: 1.4rem;
+    color: #000;
+}
