@@ -1673,7 +1673,7 @@ display: inline-block;border: 1px solid #ddd;text-align: center;line-height: 20p
             </div>
         </div>
     </div>
-<!--行情资讯 机械供应商-->
+    <!--行情资讯 机械供应商-->
     <div class="market-information-machine-supplier">
         <div class="market-information">
             <div class="machine-supplier">
@@ -1862,6 +1862,7 @@ display: inline-block;border: 1px solid #ddd;text-align: center;line-height: 20p
             </ul>
         </div>
     </div>
+
     <!--底部内容1-->
     <div class="servic">
         <div class="footerCon">
@@ -2098,10 +2099,12 @@ display: inline-block;border: 1px solid #ddd;text-align: center;line-height: 20p
 <script type="text/javascript">
     $(function(){
         $(".bg_div_li").mousemove(function () {
-            $(".layer-mask").css("display","block");
+            // $(".layer-mask").css("display","block");
+            $($(this).find(".layer-mask").css("display","block"));
         });
         $(".bg_div_li").mouseout(function(){
-            $(".layer-mask").css("display","none");
+            // $(".layer-mask").css("display","none");
+            $($(this).find(".layer-mask").css("display","none"));
         })
     });
     
@@ -2109,7 +2112,8 @@ display: inline-block;border: 1px solid #ddd;text-align: center;line-height: 20p
     	
     	$(".winport-market-li").mousemove(function(){
     		
-    		$(".hide-remain").css("display","block");
+    		// $(".hide-remain").css("display","block");
+            $($(this).find(".hide-remain").css("display","block"));
     	});
     	
     	$(".winport-market-li").mouseout(function(){

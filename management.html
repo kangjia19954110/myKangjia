@@ -47,7 +47,10 @@
                 <li class="menu_2" id="menu_1" onclick="c(1);">信息管理<i class="glicon glicon-unfold"></i>
                     <div class="menu_down" style="display:none;">
                         <a href="my.php?mid=16"><i class="glicon glicon-mall"></i>商城管理</a>
-                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>供求交易管理</a>
+                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>供应管理</a>
+                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>求购管理</a>
+                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>找货管理</a>
+                        <a href="my.php?mid=6"><i class="glicon glicon-buy"></i>上传资源表管理</a>
                         <a href="my.php?mid=7"><i class="glicon glicon-quote"></i>行情动态管理</a>
                         <a href="my.php?mid=21"><i class="glicon glicon-article"></i>资讯头条管理</a>
                         <a href="my.php?mid=17"><i class="glicon glicon-group"></i>团购管理</a>
@@ -128,9 +131,9 @@
                     <div id="sub_0">
                         <div class="side_header" id="h_0">
                             <div>信息管理</div>
-                        </div>
                         <div class="side_body" id="b_0">
                             <ul>
+                        </div>
                                 <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="message">
                                     <span class="f_r">
                                         <a href="message.php?action=send" class="m">发布</a>
@@ -141,7 +144,13 @@
                                     <span class="f_r">
                                         <a href="message.php?action=send" class="m">发布</a>
                                     </span>
-                                    <a href="message.php" class="n">供求交易管理</a>
+                                    <a href="message.php" class="n">供应交易管理</a>
+                                </li>
+                                <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="qiu">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                    <a href="message.php" class="n">求购交易管理</a>
                                 </li>
                                 <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="looks">
                                     <span class="f_r">
@@ -149,6 +158,12 @@
                                     </span>
                                     <a href="message.php" class="n">找货管理</a>
                                 </li>
+                            <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="resoure">
+                                    <span class="f_r">
+                                        <a href="message.php?action=send" class="m">发布</a>
+                                    </span>
+                                <a href="message.php" class="n">上传资源表管理</a>
+                            </li>
                                 <li class="side_a" onmouseover="v(this.id);" onmouseout="t(this.id);" id="market">
                                     <span class="f_r">
                                         <a href="message.php?action=send" class="m">发布</a>
@@ -210,15 +225,16 @@
                 <div class="tt">
                     <form action="">
                         <select name="typeid" id="select_k1">
-                            <option value="0">成品胶带</option>
-                            <option value="1">包装辅材</option>
-                            <option value="2">机械设备</option>
+                            <option value="0">行业分类</option>
+                            <option value="1">成品胶带</option>
+                            <option value="2">包装辅材</option>
+                            <option value="3">机械设备</option>
                         </select>
-                        <select name="style" id=select_k2"">
-                            <option value="0">供应</option>
-                            <option value="1">求购</option>
+                        <!--<select name="style" id=select_k2"">-->
+                            <!--<option value="0">供应</option>-->
+                            <!--<option value="1">求购</option>-->
 
-                        </select>
+                        <!--</select>-->
                         <input type="text" name="kw" value="" size="50" class="key_k">
                         <input type="submit" value="搜索" class="btn">
                     </form>
@@ -231,25 +247,25 @@
                                     <th width="20">
                                         <input type="checkbox" onclick="checkall(this.form);">
                                     </th>
-                                    <th width="63">类型</th>
-                                    <th width="141">品名</th>
+                                    <!--<th width="63">类型</th>-->
+                                    <th width="204">标题</th>
                                     <th width="106">行业</th>
                                     <th width="153">更新时间</th>
                                     <th width="88">浏览次数</th>
-                                    <th width="109">信息</th>
+                                    <!--<th width="109">信息</th>-->
                                     <th width="270">管理</th>
                                 </tr>
                             <tr align="center" onmouseover="this.className='on';" onmouseout="this.className='';" class="" >
                                 <td>
                                     <input type="checkbox" name="" value="">
                                 </td>
-                                <td>求购</td>
+                                <!--<td>求购</td>-->
                                 <td><a href="" class="k_t">美纹纸胶带</a></td>
                                 <td>成品胶带</td>
                                 <td><a href="" class="k_date">2019-02-19</a></td>
                                 <td><a href="" class="k_date">5465</a></td>
-                                <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                 <!--<td>刷新</td>-->
                                 <!--<td>修改</td>-->
                                 <!--<td>删除</td>-->
@@ -258,13 +274,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -272,13 +288,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -287,13 +303,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -302,13 +318,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -317,13 +333,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -331,13 +347,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -345,13 +361,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -359,13 +375,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -374,13 +390,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -389,13 +405,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -404,13 +420,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -419,13 +435,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -434,13 +450,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -449,13 +465,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -464,13 +480,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -479,13 +495,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -494,13 +510,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -509,13 +525,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -524,13 +540,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -539,13 +555,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -554,13 +570,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -569,13 +585,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -584,13 +600,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -599,13 +615,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -614,13 +630,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -629,13 +645,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -644,13 +660,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -659,13 +675,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -674,13 +690,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -689,13 +705,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -704,13 +720,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -719,13 +735,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -734,13 +750,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
@@ -749,13 +765,13 @@
                                     <td>
                                         <input type="checkbox" name="" value="">
                                     </td>
-                                    <td>求购</td>
+                                    <!--<td>求购</td>-->
                                     <td><a href="" class="k_t">美纹纸胶带</a></td>
                                     <td>成品胶带</td>
                                     <td><a href="" class="k_date">2019-02-19</a></td>
                                     <td><a href="" class="k_date">5465</a></td>
-                                    <td>查看回复(<a href="" class="k_nums">8</a>)</td>
-                                    <td>完成求购 <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
+                                    <!--<td>查看回复(<a href="" class="k_nums">8</a>)</td>-->
+                                    <td> <a href="">刷新</a> <a href="">修改</a> <a href="">删除</a></td>
                                     <!--<td>刷新</td>-->
                                     <!--<td>修改</td>-->
                                     <!--<td>删除</td>-->
